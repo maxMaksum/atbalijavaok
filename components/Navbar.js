@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Link from 'next/link'
 
 function Navbar() {
    const [open, setopen] = useState(true)
@@ -8,14 +9,26 @@ function Navbar() {
         <div  className="  bg-gradient-to-r from-green-500 to-green-700 shadow-lg fixed top-0 inset-x-0 z-20">
             <div  className=" mx-auto">
                 <div className="flex justify-around items-center h-20">
-                    <a href="#" className="block text-white text-3xl font-bold  py-4 sm:p-3"> At BaliJava</a>
+                    <Link href="/">
+                         <a className="block text-white text-3xl font-bold  py-4 sm:p-3"> At BaliJava</a>
+                    </Link>
+                   
 
                     <div className = { " hidden sm:flex justify-even items-center"}>
+                        <Link href="/" >
+                           <a className="text-gray-100 font-semi-bold hover:bg-green-500 round px-4"> Home</a>
+                        </Link>
 
-                        <a href="#" className="text-gray-100 font-semi-bold hover:bg-green-500 round px-4"> Home</a>
-                        <a href="#" className="text-gray-100 font-semi-bold hover:bg-green-500 round px-4"> Profile</a>
-                        <a href="#" className="text-gray-100 font-semi-bold hover:bg-green-500 round px-4"> Product</a>
-                        <a href="#" className="text-gray-100 font-semi-bold hover:bg-green-500 round px-4"> Contact</a>
+                        <Link href="/about" >
+                           <a className="text-gray-100 font-semi-bold hover:bg-green-500 round px-4"> About</a>
+                        </Link>
+
+                        <Link href="/products" >
+                           <a className="text-gray-100 font-semi-bold hover:bg-green-500 round px-4"> Products</a>
+                        </Link>
+                        <Link href="/contact" >
+                           <a className="text-gray-100 font-semi-bold hover:bg-green-500 round px-4"> Contact</a>
+                        </Link>
 
                     </div>
 
@@ -36,21 +49,20 @@ function Navbar() {
                 </div>
 
                 <div className = { open ? "block sm:hidden":"hidden"}>
-
-                    <a href="#" className="block text-gray-100 font-semi-bold hover:bg-green-500 round px-4"> Home</a>
-                    <a href="#" className="block text-gray-100 font-semi-bold hover:bg-green-500 round px-4"> Profile</a>
-                    <a href="#" className="block text-gray-100 font-semi-bold hover:bg-green-500 round px-4"> Product</a>
-                    <a href="#" className="block text-gray-100 font-semi-bold hover:bg-green-500 round px-4"> Contact</a>
-
+                    <Link href="/"> 
+                        <a  className="block text-gray-100 font-semi-bold hover:bg-green-500 round px-4"> Home </a> 
+                    </Link>
+                    <Link href="/about">
+                         <a className="block text-gray-100 font-semi-bold hover:bg-green-500 round px-4"> About</a> 
+                    </Link>
+                    <Link href="/products"> 
+                        <a  className="block text-gray-100 font-semi-bold hover:bg-green-500 round px-4"> Products</a> 
+                    </Link>
+                    <Link href="/contact"> 
+                        <a  className="block text-gray-100 font-semi-bold hover:bg-green-500 round px-4"> Contacts</a> 
+                    </Link>
                 </div>
-                <ul >
-
-                    
-                    
-                </ul>
-
-             
-
+    
             </div>
 
             

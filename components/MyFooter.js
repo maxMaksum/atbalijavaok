@@ -2,8 +2,8 @@ import React from 'react'
 
 function MyFooter() {
     return (
-        <div className="min-h-screen">
-            <div className="fixed bottom-0 inset-x-0 bg-green-700 py-2 flex justify-between text-sm text-gray-200">
+        <div className="min-h-screen z-20">
+            <div className="fixed bottom-0 inset-x-0 bg-green-700 py-2 flex justify-between text-sm text-gray-200 z-20">
                 <a href="#" className="block py-1 text-center w-full hover:text-gray-200 hover:bg-green-500 rounded">
                 <svg className=" w-7 h-7 mb-1 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
                     
